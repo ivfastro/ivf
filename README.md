@@ -1,2 +1,0 @@
-# ivf
-Indian Vedic Founation 
