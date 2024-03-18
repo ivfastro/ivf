@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,19 +22,26 @@
             object-fit: cover;
         }
 
+        #container {
+            height: 100vh;
+            overflow-y: auto;
+        }
+
         #content {
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            padding: 20px;
             text-align: center;
             color: #fff;
+            margin-top: 150px;
+            padding: 0 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         h1 {
             font-size: 3em;
             margin: 0;
-            color: #e74c3c; /* Red color */
+            color: #ddd;
         }
 
         h2 {
@@ -49,7 +55,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: #212F3D;
             padding: 15px;
             box-sizing: border-box;
             z-index: 1;
@@ -65,15 +71,16 @@
         }
 
         nav a:hover {
-            color: #3498db; /* Highlight color on hover */
+            color: #3498db;
         }
 
         /* Dropdown Button */
         .dropbtn {
-            background-color: #484848; /*color rectangle background*/
+            background-color: #212F3D;
             color: white;
             padding: 16px;
-            font-size: 16px;
+            font-size: 1.2em;
+            transition: color 0.3s ease-in-out;
             border: none;
         }
 
@@ -102,60 +109,59 @@
         }
 
         /* Change color of dropdown links on hover */
-        .dropdown-content a:hover {background-color: #ddd;}
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
 
         /* Show the dropdown menu on hover */
-        .dropdown:hover .dropdown-content {display: block;}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
         /* Change the background color of the dropdown button when the dropdown content is shown */
-        .dropdown:hover .dropbtn {background-color: #3#ddd;}
+        .dropdown:hover .dropbtn {
+            background-color: #3#ddd;
+        }
 
-        /* Media Queries for Responsive Design */
+        /* Responsive Header */
         @media only screen and (max-width: 768px) {
-            #content {
-                top: 20%;
-            }
-            h1 {
-                font-size: 2.5em;
-            }
-            h2 {
-                font-size: 1.5em;
-            }
             nav {
-                padding: 10px;
+                flex-direction: column;
             }
+
             nav a {
-                font-size: 1em;
+                margin: 10px 0;
             }
         }
 
-        @media only screen and (max-width: 480px) {
-            #content {
-                top: 15%;
-            }
-            h1 {
-                font-size: 2em;
-            }
-            h2 {
-                font-size: 1.2em;
-            }
-            nav {
-                padding: 5px;
-            }
-            nav a {
-                font-size: 0.8em;
-            }
+        /* Styling for lecture videos */
+        .lecture-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .lecture-video {
+            width: 45%;
+            margin-bottom: 20px;
+        }
+
+        .lecture-video iframe {
+            width: 100%;
+            height: 300px;
         }
     </style>
 </head>
 
 <body>
-    <video id="video-background" autoplay muted loop>
-        <source src="abc.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
 
-  <nav>
+<video id="video-background" autoplay loop muted>
+    <source src="abc.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="course.html">Courses</a>
@@ -187,13 +193,12 @@
     </div>
 </nav>
 
-
-
-    <div id="content" style="position: absolute; left: 601px; top: 334px">
+    <div id="content">
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <h1>Indian Vedic Foundation</h1>
-        <h3>Welcomes you</h3>
+		<br><br><br>
+        <h2>Welcomes you</h2>
     </div>
-    
 </body>
 
 </html>
